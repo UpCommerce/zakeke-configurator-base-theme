@@ -1,0 +1,46 @@
+{
+  "name": "basic-theme",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/lodash": "^4.14.152",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/styled-components": "^5.1.0",
+    "cpy-cli": "^3.1.1",
+    "lodash": "^4.17.15",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1",
+    "styled-components": "^5.1.0",
+    "typescript": "~3.7.2",
+    "zakeke-configurator-react": "^0.0.4-0"
+  },
+  "scripts": {
+    "copy": "cpy node_modules/zakeke-configurator-react/dist/globals*.js public/",
+    "start": "npm run copy && react-scripts start",
+    "build": "npm run copy && react-scripts build",
+    "test": "npm run copy && react-scripts test",
+    "eject": "npm run copy && react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
