@@ -3645,7 +3645,7 @@ cpy-cli@^3.1.1:
     cpy "^8.0.0"
     meow "^6.1.1"
 
-cpy@^8.0.0:
+cpy@^8.0.0, cpy@^8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/cpy/-/cpy-8.1.0.tgz#e8ac07f3caeb0113bd55326e5cda052c19fa6c60"
   integrity sha512-XwlImkjPxMr01qXqC564VD4rfcDQ2eKtYmFlCy0ixsLRJ1cwYVUBh+v47jsQTO1IrmvdjqO813VpDQ0JiTuOdA==
@@ -12098,10 +12098,10 @@ yargs@^13.3.0, yargs@^13.3.2:
     y18n "^4.0.0"
     yargs-parser "^13.1.2"
 
-zakeke-configurator-react@^0.0.4-0:
-  version "0.0.4-0"
-  resolved "https://registry.yarnpkg.com/zakeke-configurator-react/-/zakeke-configurator-react-0.0.4-0.tgz#a5470f433a63e96da28f1009d0ec4b9478a52ab9"
-  integrity sha512-WxiRMpUHgzd7hSOUv3+wkk9u4NUM/+oxwp/kWQziiKzbjlRiBfqxi18xVRgcClFRwDGXv6HLWYIRWe7MXzIhOg==
+zakeke-configurator-react@^0.0.10:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/zakeke-configurator-react/-/zakeke-configurator-react-0.0.10.tgz#6c1d0a93749404bf1b64e489e07b622d2dca5743"
+  integrity sha512-iL+Lc95EY2eM1eqk/HsPZ4yCRCmBOyW/PIZEyfmfupNZ2Spd/+DxOccbmg+o9l8WWesIy2B7OG6/0SFq8Jnxjw==
   dependencies:
     "@wessberg/rollup-plugin-ts" "^1.2.21"
     attr-accept "^1.1.3"

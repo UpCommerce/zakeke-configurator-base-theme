@@ -2,6 +2,7 @@
   "name": "basic-theme",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -12,6 +13,7 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "@types/styled-components": "^5.1.0",
+    "cpy": "^8.1.0",
     "cpy-cli": "^3.1.1",
     "lodash": "^4.17.15",
     "react": "^16.13.1",
@@ -19,7 +21,7 @@
     "react-scripts": "3.4.1",
     "styled-components": "^5.1.0",
     "typescript": "~3.7.2",
-    "zakeke-configurator-react": "^0.0.4-0"
+    "zakeke-configurator-react": "^0.0.10"
   },
   "scripts": {
     "copy": "cpy node_modules/zakeke-configurator-react/dist/globals*.js public/",

@@ -12,7 +12,7 @@ const Container = styled.div`
 
 const Selector: FunctionComponent<{}> = () => {
 
-    const { isSceneLoading, isAddToCartLoading, price, groups, selectOption, addToCart } = useZakeke();
+    const { isSceneLoading, productName, isAddToCartLoading, price, groups, selectOption, addToCart } = useZakeke();
 
     // Keep saved the ID and not the refereces, they will change on each update
     const [selectedGroupId, selectGroup] = useState<number | null>(null);
@@ -44,7 +44,7 @@ const Selector: FunctionComponent<{}> = () => {
 
 
     if (isSceneLoading || !groups || groups.length === 0)
-        return <span>Loading scene...</span>;
+        return <span>Loading configurator...</span>;
 
     // groups
     // -- attributes
@@ -54,6 +54,7 @@ const Selector: FunctionComponent<{}> = () => {
     // -- -- -- options
 
     return <Container>
+        <h1>{productName}</h1>
         <List>
             {groups.map(group => {
                 return <ListItem key={group.id} onClick={() => selectGroup(group.id)} selected={selectedGroup === group}>Group: {group.id === -1 ? 'Other' : group.name}</ListItem>;
