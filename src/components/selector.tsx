@@ -1,9 +1,7 @@
-import React, { FunctionComponent } from 'react';
-import { useZakeke } from 'zakeke-configurator-react';
-import { useState } from 'react';
-import { useEffect } from 'react';
-import { List, ListItem, ListItemImage } from './list';
+import React, { FunctionComponent, useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { useZakeke } from 'zakeke-configurator-react';
+import { List, ListItem, ListItemImage } from './list';
 
 const Container = styled.div`
     height: 100%;
@@ -12,7 +10,7 @@ const Container = styled.div`
 
 const Selector: FunctionComponent<{}> = () => {
 
-    const { isSceneLoading, productName, isAddToCartLoading, price, groups, selectOption, addToCart } = useZakeke();
+    const { isSceneLoading, product, productName, isAddToCartLoading, price, groups, templates, currentTemplate, loadComposition, setTemplate, selectOption, addToCart } = useZakeke();
 
     // Keep saved the ID and not the refereces, they will change on each update
     const [selectedGroupId, selectGroup] = useState<number | null>(null);
@@ -34,14 +32,35 @@ const Selector: FunctionComponent<{}> = () => {
             if (groups[0].steps.length > 0)
                 selectStep(groups[0].steps[0].id);
         }
+
+        //eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedGroup, groups]);
 
     // Select attribute first time
     useEffect(() => {
         if (!selectedAttribute && attributes.length > 0)
             selectAttribute(attributes[0].id);
-    }, [selectedAttribute, attributes])
+        
+        //eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [selectedAttribute, groups])
 
+    useEffect(() => {
+        if (templates.length > 0 && !currentTemplate)
+            setTemplate(templates[0].id);
+
+        //eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [templates]);
+
+    useEffect(() => {
+        // Read "composition" parameter from query string
+        var params = new URLSearchParams(window.location.search);
+        const composition = params.get('composition');
+
+        if (composition && !isSceneLoading && product && groups.length > 0)
+            loadComposition(composition);
+            
+        //eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isSceneLoading, product, groups])
 
     if (isSceneLoading || !groups || groups.length === 0)
         return <span>Loading configurator...</span>;
