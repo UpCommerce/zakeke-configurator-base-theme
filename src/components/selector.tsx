@@ -37,7 +37,7 @@ const Selector: FunctionComponent<{}> = () => {
   // Attributes can be in both groups and steps, so show the attributes of step or in a group based on selection
   const attributes = (selectedStep || selectedGroup)?.attributes ?? [];
   const selectedAttribute = attributes.find(
-    (attribute) => attribute.id === selectedAttributeId
+    (attribute) => attribute.id === selectedAttributeId,
   );
 
   // Open the first group and the first step when loaded
