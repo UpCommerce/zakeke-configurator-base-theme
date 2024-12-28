@@ -3,15 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "homepage": ".",
-  "dependencies": {
-    "lodash": "^4.17.21",
-    "react": "^17",
-    "react-dom": "^17",
-    "react-scripts": "5.0.1",
-    "styled-components": "^5.3.6",
-    "typescript": "~4.8.4",
-    "zakeke-configurator-react": "^0.0.120"
-  },
   "scripts": {
     "copy": "shx cp \"node_modules/zakeke-configurator-react/dist/globals0.js\" \"public/\" && shx cp \"node_modules/zakeke-configurator-react/dist/globals1.js\" \"public/\" && shx cp \"node_modules/zakeke-configurator-react/dist/globals2.js\" \"public/\"",
     "start": "npm run copy && react-scripts start",
@@ -35,13 +26,20 @@
     ]
   },
   "devDependencies": {
-    "shx": "^0.3.4",
+    "@types/lodash": "^4.14.188",
+    "@types/node": "^22.10.2",
     "@types/react": "^17",
     "@types/react-dom": "^17",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^12",
-    "@types/jest": "^29.2.2",
-    "@types/lodash": "^4.14.188",
-    "@types/styled-components": "^5.1.26"
+    "@types/styled-components": "^5.1.26",
+    "shx": "^0.3.4"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-scripts": "^5.0.1",
+    "styled-components": "^6.1.13",
+    "typescript": "^4.9.5",
+    "zakeke-configurator-react": "^0.1.299"
   }
 }
