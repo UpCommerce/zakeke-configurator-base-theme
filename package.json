@@ -41,5 +41,13 @@
     "styled-components": "^6.1.13",
     "typescript": "^4.9.5",
     "zakeke-configurator-react": "^0.1.299"
+  },
+  "overrides": {
+    "underscore": "^1.13.8",
+    "nth-check": "^2.1.1",
+    "serialize-javascript": "^6.0.2",
+    "@tootallnate/once": "^2.0.1",
+    "postcss-selector-parser@6": "7.1.6",
+    "resolve-url-loader": "^5.0.0"
   }
 }
