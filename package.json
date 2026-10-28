@@ -4,7 +4,7 @@
   "private": true,
   "homepage": ".",
   "scripts": {
-    "copy": "shx cp \"node_modules/zakeke-configurator-react/dist/globals0.js\" \"public/\" && shx cp \"node_modules/zakeke-configurator-react/dist/globals1.js\" \"public/\" && shx cp \"node_modules/zakeke-configurator-react/dist/globals2.js\" \"public/\"",
+    "copy": "shx cp \"node_modules/zakeke-configurator-react/dist/globals0.js\" \"public/\" && shx cp \"node_modules/zakeke-configurator-react/dist/globals1.js\" \"public/\" && shx cp \"node_modules/zakeke-configurator-react/dist/globals2.js\" \"public/\" && shx cp \"node_modules/zakeke-configurator-react/dist/globals3.js\" \"public/\"",
     "start": "npm run copy && vite",
     "build": "npm run copy && tsc --noEmit && vite build",
     "preview": "vite preview"
