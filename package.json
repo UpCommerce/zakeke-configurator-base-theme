@@ -5,25 +5,9 @@
   "homepage": ".",
   "scripts": {
     "copy": "shx cp \"node_modules/zakeke-configurator-react/dist/globals0.js\" \"public/\" && shx cp \"node_modules/zakeke-configurator-react/dist/globals1.js\" \"public/\" && shx cp \"node_modules/zakeke-configurator-react/dist/globals2.js\" \"public/\"",
-    "start": "npm run copy && react-scripts start",
-    "build": "npm run copy && react-scripts build",
-    "test": "npm run copy && react-scripts test",
-    "eject": "npm run copy && react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "start": "npm run copy && vite",
+    "build": "npm run copy && tsc --noEmit && vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.188",
@@ -31,13 +15,14 @@
     "@types/react": "^17",
     "@types/react-dom": "^17",
     "@types/styled-components": "^5.1.26",
-    "shx": "^0.3.4"
+    "@vitejs/plugin-react": "^5.1.1",
+    "shx": "^0.3.4",
+    "vite": "^7.3.7"
   },
   "dependencies": {
     "lodash": "^4.17.21",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-scripts": "^5.0.1",
     "styled-components": "^6.1.13",
     "typescript": "^4.9.5",
     "zakeke-configurator-react": "^0.1.299"
